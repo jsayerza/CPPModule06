@@ -14,18 +14,42 @@
 #include <iostream>
 #include "ScalarConverter.hpp"
 
+void	test_converter(std::string str) {
+	std::cout << "--- Input: " << str << " ---" << std::endl;
+	ScalarConverter::convert(str);
+	std::cout << std::endl;
+}
+
 int	main(int argc, char** argv)
 {
-	if (argc != 2)
-	{
-		std::cerr << "Error: Usage: ./convert {param}" << std::endl;
-		return (1);
-	}
+	// if (argc != 2)
+	// {
+	// 	std::cerr << "Error: Usage: ./convert {param}" << std::endl;
+	// 	return (1);
+	// }
 
-	std::string input(argv[1]);
-	ScalarConverter::convert(input);
+	// std::string input(argv[1]);
+	// ScalarConverter::convert(input);
 	// std::cerr << "argv[1]: " << argv[1] << std::endl;
 	// ScalarConverter::convert(argv[1]);
+
+	(void)argc;
+	(void)argv;
+	test_converter("0");
+	test_converter("42");
+	test_converter("42.0");
+	test_converter("42.0f");
+	test_converter("42.2");
+	test_converter("-42.2");
+	test_converter("42.2f");
+	test_converter("42...2f");
+	test_converter("-inff");
+	test_converter("+inf");
+	test_converter("nan");
+	test_converter("invalid");
+	test_converter("42.2ff");
+	test_converter("4.2.2f");
+	test_converter("--42");
 
 	return (0);
 }

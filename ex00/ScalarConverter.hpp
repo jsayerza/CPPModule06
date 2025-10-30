@@ -20,11 +20,11 @@ class ScalarConverter
 {
 	private:
 		ScalarConverter();
+		ScalarConverter(const ScalarConverter& other);
 		~ScalarConverter();
+		ScalarConverter& operator=(const ScalarConverter& other);
 	public:
 		static void convert(const std::string& str);
-		// static void convert(char* str);
-
 };
 
 #endif

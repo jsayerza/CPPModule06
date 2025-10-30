@@ -1,20 +1,19 @@
 NAME = convert
 
 CXX = c++
-# CXXFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # Flags para debug
 DEBUG_FLAGS = -g -fsanitize=address -fsanitize=undefined
 
 SRCS =		main.cpp \
-			ScalarConverter.cpp \
-			ScalarConverterFuncs.cpp
+			ScalarConverter.cpp 
+			# ScalarConverterFuncs.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-HEADERS =	ScalarConverter.hpp \
-			ScalarConverterFuncs.hpp
+HEADERS =	ScalarConverter.hpp 
+			# ScalarConverterFuncs.hpp
 
 all: $(NAME)
 
