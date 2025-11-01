@@ -3,17 +3,15 @@ NAME = convert
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-# Flags para debug
+# Flags per a debug
 DEBUG_FLAGS = -g -fsanitize=address -fsanitize=undefined
 
 SRCS =		main.cpp \
 			ScalarConverter.cpp 
-			# ScalarConverterFuncs.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
 HEADERS =	ScalarConverter.hpp 
-			# ScalarConverterFuncs.hpp
 
 all: $(NAME)
 
@@ -23,7 +21,7 @@ $(NAME): $(OBJS)
 %.o: %.cpp $(HEADERS) Makefile
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# Regla para debug
+# Regla per a debug
 debug: CXXFLAGS += $(DEBUG_FLAGS)
 debug: re
 
