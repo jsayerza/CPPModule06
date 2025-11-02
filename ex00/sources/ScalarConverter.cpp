@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#include "../includes/ScalarConverter.hpp"
 #include <iomanip>
 #include <sstream>
 #include <cmath>

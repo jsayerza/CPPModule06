@@ -12,7 +12,7 @@
 
 #include <string>
 #include <iostream>
-#include "ScalarConverter.hpp"
+#include "../includes/ScalarConverter.hpp"
 
 void	test_converter(std::string str) {
 	std::cout << "--- Input: " << str << std::endl;
@@ -70,3 +70,22 @@ int	main(int argc, char** argv)
 
 	return (0);
 }
+
+// // Notes
+// // Resum: Converteix string → double → float, validant que tota la conversió sigui correcta
+
+// // cppdouble d = std::strtod(str.c_str(), &end); 
+// // 	Converteix el string str a double. end apunta al primer caràcter no convertit.
+
+// // cppbool validConversion = (end != str.c_str() && *end == '\0'); 
+// // 	Verifica que: 
+// // 		end != str.c_str() → Almenys un caràcter va ser convertit 
+// // 		*end == '\0' → S'ha arribat al final de l'string (no han quedat caràcters sense processar)
+// // 	Exemple:
+// // 		"123" → vàlid (tot convertit)
+// // 		"123abc" → invàlid (ha quedat "abc")
+// // 		"abc" → invàlid (res convertit)
+
+// // cppfloat f = static_cast<float>(d); 
+// // 	Converteix el double a float de manera explícita, perdent precisió.
+	
