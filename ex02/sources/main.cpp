@@ -62,8 +62,6 @@ void identify(Base& p)
 	std::cout << "Type: desconegut" << std::endl;
 }
 
-
-
 Base* generate(void)
 {
 	int i = rand() % 3;
@@ -80,7 +78,6 @@ Base* generate(void)
 		return (new C());
 	}
 }
-
 
 int	main(void)
 {
