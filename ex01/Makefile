@@ -9,11 +9,11 @@ DEBUG_FLAGS = -g -fsanitize=address -fsanitize=undefined
 
 INC_PATH =	./includes/
 INC =		-I $(INC_PATH)
-HEADERS =	$(INC_PATH)ScalarConverter.hpp 
+HEADERS =	$(INC_PATH)Serializer.hpp 
 
 SRC_PATH =	./sources/
 SRC =		$(SRC_PATH)main.cpp \
-			$(SRC_PATH)ScalarConverter.cpp 
+			$(SRC_PATH)Serializer.cpp 
 
 OBJ_PATH =	./objects/
 OBJ =		$(SRC:$(SRC_PATH)%.cpp=$(OBJ_PATH)%.o)
@@ -47,4 +47,4 @@ re: fclean all
 
 .PHONY: all clean fclean re debug
 
-# valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./convert
+# valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./serializer

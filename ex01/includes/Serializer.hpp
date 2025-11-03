@@ -16,7 +16,7 @@
 # include <string>
 # include <iostream>
 # include <sstream>
-# include <cstdint>
+# include <stdint.h>
 
 struct Data
 {
