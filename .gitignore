@@ -6,6 +6,7 @@
 *.json
 convert
 serializer
+identify
 
 # Prerequisites
 *.d

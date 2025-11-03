@@ -17,16 +17,13 @@ Serializer::Serializer()
 	std::cout << "Serializer default constructor called " << std::endl;
 }
 
-Serializer::Serializer(const Serializer& other)
+Serializer::Serializer(const Serializer&)
 {
-	if (this != &other)
-		*this = other;
 	std::cout << "Serializer copy constructor called " << std::endl;
 }
 
-Serializer& Serializer::operator=(const Serializer& other)
+Serializer& Serializer::operator=(const Serializer&)
 {
-	(void)other;
 	return (*this);
 	std::cout << "Serializer assignment operator constructor called " << std::endl;
 }
