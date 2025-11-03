@@ -13,15 +13,8 @@
 #ifndef C_HPP
 # define C_HPP
 
-# include <string>
-# include <iostream>
 # include "../includes/Base.hpp"
 
-class C : public Base
-{
-	public:
-		 C();
-		 ~C();
-};
+class C : public Base {};
 
 #endif

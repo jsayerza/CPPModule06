@@ -13,20 +13,12 @@
 #ifndef BASE_HPP
 # define BASE_HPP
 
-# include <string>
 # include <iostream>
 
 class Base
 {
-	protected:
-		std::string _type;
 	public:
-		Base();
 		virtual ~Base();
-
-		static Base * generate(void);
-		void identify(Base* p);
-		void identify(Base& p);
 };
 
 #endif

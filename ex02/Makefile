@@ -16,10 +16,7 @@ HEADERS =	$(INC_PATH)Base.hpp \
 
 SRC_PATH =	./sources/
 SRC =		$(SRC_PATH)main.cpp \
-			$(SRC_PATH)Base.cpp \
-			$(SRC_PATH)A.cpp \
-			$(SRC_PATH)B.cpp \
-			$(SRC_PATH)C.cpp 
+			$(SRC_PATH)Base.cpp 
 
 OBJ_PATH =	./objects/
 OBJ =		$(SRC:$(SRC_PATH)%.cpp=$(OBJ_PATH)%.o)

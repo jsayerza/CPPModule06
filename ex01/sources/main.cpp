@@ -57,4 +57,8 @@ int	main(void)
 	return (0);
 }
 
-////Notes: reinterpret_cast converteix el punter a integer i viceversa sense perdre informació.
+////Notes: 
+////- reinterpret_cast converteix el punter a integer i viceversa sense perdre informació.
+////- Són static porquè no necessiten estat de instància. 
+////   Les funcions només fan conversions de tipus (reinterpret_cast). 
+////   No necessiten accedir a cap atribut de la classe, es poden usar directament.
